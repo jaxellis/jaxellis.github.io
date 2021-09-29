@@ -1,8 +1,11 @@
 :root {
 	--main-background-color: rgb(0, 0, 0);
-	--main-foreground-color: rgb(43, 43, 43);
-	--main-accent-color: rgb(0, 255, 255);
+	--main-foreground-color: rgba(12, 12, 12, 0.678);
+	--main-accent-color: rgb(86, 238, 244);
 	--main-text-color: rgb(255, 255, 255);
+	--large-padding: 12px;
+	--medium-padding: 8px;
+	--small-padding: 4px;
 }
 
 body {
@@ -14,12 +17,36 @@ body {
 	flex-direction: column;
 	align-items: center;
 }
+.content-foreground {
+	width: 60%;
+}
 .text-box {
-	background-color: var(--main-foreground-color);
 	font-family: 'Courier New', Courier, monospace;
 	font-size: xx-large;
 	color: rgb(0, 255, 255);
 }
+.content-wrapper {
+	background-color: var(--main-foreground-color);
+	margin-bottom: 10px;
+}
+
+/* Gallery */
+.gallery {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.gallery-image > img {
+	width: 400px;
+	height: 300px
+}
+
+/*
+---------
+Footer
+---------
+*/
 
 footer {
 	position: fixed;
@@ -28,4 +55,79 @@ footer {
 	text-align: center;
 	width: 100%;
 	background-color: var(--main-foreground-color);
+}
+
+.footer-container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+.footer-inner {
+	display: flex;
+	flex-direction: column;
+	padding: 0 10px 0 10px;
+	text-indent: 30%;
+}
+.footer-header {
+	padding: var(--medium-padding);
+}
+
+/*
+--------
+Sidebar
+--------
+*/
+.sidebar {
+	height: 100%;
+	width: 200px;
+	background-color: var(--main-foreground-color);
+	position: fixed !important;
+	left: 0;
+	top: 0;
+	z-index: 1;
+	overflow: auto;
+}
+.item {
+	padding: 8px 16px;
+	float: left;
+	width: auto;
+	border: none;
+	display: block;
+	outline: 0;
+}
+.block .item {
+	width: 100%;
+	display: block;
+	padding: 8px 16px;
+	text-align: left;
+	border: none;
+	white-space: normal;
+	float: none;
+	outline: 0;
+}
+
+.hide {
+	display: none;
+}
+.show-block,
+.show {
+	display: block;
+}
+.show-inline-block {
+	display: inline-block;
+}
+.btn,
+.button {
+	border: none;
+	display: inline-block;
+	padding: 8px 16px;
+	vertical-align: middle;
+	overflow: hidden;
+	text-decoration: none;
+	color: inherit;
+	background-color: inherit;
+	text-align: center;
+	cursor: pointer;
+	white-space: nowrap;
 }

@@ -9,24 +9,62 @@
 		<link rel="icon" href="/favicon.ico" />
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 		<link rel="stylesheet" href="styles/css/styles.css?v=1.0" />
+		<script
+			src="https://kit.fontawesome.com/07bd736df4.js"
+			crossorigin="anonymous"
+		></script>
 	</head>
 
 	<body>
-		<div class="main-content">
-			<div class="text-box">
-				<span> Hello There General Kenobi </span>
+		<div class="sidebar">
+			<div class="block">
+				<a href="/" class="item button">Home</a>
+				<button class="button block left-align" onclick="ShowDropdown()">
+					Links <i class="fa fa-caret-down"></i>
+				</button>
+				<div id="hidden-dropdown" class="hide white card">
+					<a href="https://github.com/jaxellis" class="item button">Github</a>
+				</div>
 			</div>
-			<div class="image-holder">
-				<img src="/assets/images/City_Scape.jpg" />
+		</div>
+		<div class="main-content">
+			<div class="content-foreground">
+				<div class="content-wrapper">
+					<div class="gallery-container">
+						<div class="gallery">
+							<div class="gallery-text">
+								<span>Sleeping over the City Scape</span>
+							</div>
+							<div class="gallery-image">
+								<img src="/assets/images/City_Scape.jpg" />
+							</div>
+							<div class="gallery">
+								<div class="gallery-text">
+									<span>Cute Husky</span>
+								</div>
+								<div class="gallery-image">
+									<img src="/assets/images/Husky.jpg" />
+								</div>
+							</div>
+							<div class="gallery">
+								<div class="gallery-text">
+									<span>Freezing in the mountains</span>
+								</div>
+								<div class="gallery-image">
+									<img src="/assets/images/mountains.jpg" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 		<script src="scripts/js/scripts.js"></script>
 	</body>
+
 	<footer>
-		<div>
-			<div>
-				<p>Placeholder</p>
-			</div>
+		<div class="footer-container">
+			<p>Placeholder</p>
 		</div>
 	</footer>
 </html>
