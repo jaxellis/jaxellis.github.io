@@ -9,6 +9,7 @@
 		<link rel="icon" href="/favicon.ico" />
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 		<link rel="stylesheet" href="styles/css/styles.css?v=1.0" />
+		<link rel="stylesheet" href="styles/css/font-awesome.css?v=1.0" />
 		<script
 			src="https://kit.fontawesome.com/07bd736df4.js"
 			crossorigin="anonymous"
@@ -17,13 +18,22 @@
 
 	<body>
 		<div class="sidebar">
-			<div class="block">
-				<a href="/" class="item button">Home</a>
-				<button class="button block left-align" onclick="ShowDropdown()">
-					Links <i class="fa fa-caret-down"></i>
-				</button>
-				<div id="hidden-dropdown" class="hide white card">
-					<a href="https://github.com/jaxellis" class="item button">Github</a>
+			<div class="sidebar-outer block">
+				<div class="item">
+					<a href="/" class="item button text" id="sidebar-home">
+						<span>Home</span>
+					</a>
+				</div>
+				<div class="item">
+					<button
+						class="item text button block sidebar-dropdown"
+						id="sidebar-links"
+					>
+						<span>Links</span>
+					</button>
+					<div id="hidden-dropdown" class="hide white card">
+						<a href="https://github.com/jaxellis" class="item button">Github</a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -59,7 +69,7 @@
 				</div>
 			</div>
 		</div>
-		<script src="scripts/js/scripts.js"></script>
+		<script src="scripts/js/sidebar.js"></script>
 	</body>
 
 	<footer>

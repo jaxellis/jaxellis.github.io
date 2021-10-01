@@ -1,0 +1,22 @@
+.item.button.text::before {
+	padding-right: 1em;
+	padding-left: 1em;
+}
+a#sidebar-home::before {
+	content: '\f015';
+	font-family: FontAwesome;
+}
+#sidebar-links::before {
+	content: '\f0c1';
+	font-family: FontAwesome;
+}
+.sidebar-dropdown::after {
+	content: '\f0d7';
+    font-family: FontAwesome;
+    float: right;
+	transition: 0.5s;
+}
+.is-expanded::after {
+	transform: rotatex(180deg);
+	transition: 0.5s;
+}
