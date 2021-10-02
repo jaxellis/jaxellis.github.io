@@ -12,8 +12,8 @@ a#sidebar-home::before {
 }
 .sidebar-dropdown::after {
 	content: '\f0d7';
-    font-family: FontAwesome;
-    float: right;
+	font-family: FontAwesome;
+	float: right;
 	transition: 0.5s;
 }
 .is-expanded::after {
