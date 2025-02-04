@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/jaxellis.github.io/static/css/main.d8b84879.css",
-    "main.js": "/jaxellis.github.io/static/js/main.9f971122.js",
-    "index.html": "/jaxellis.github.io/index.html",
-    "main.d8b84879.css.map": "/jaxellis.github.io/static/css/main.d8b84879.css.map",
-    "main.9f971122.js.map": "/jaxellis.github.io/static/js/main.9f971122.js.map"
+    "main.css": "/static/css/main.d8b84879.css",
+    "main.js": "/static/js/main.568c7702.js",
+    "index.html": "/index.html",
+    "main.d8b84879.css.map": "/static/css/main.d8b84879.css.map",
+    "main.568c7702.js.map": "/static/js/main.568c7702.js.map"
   },
   "entrypoints": [
     "static/css/main.d8b84879.css",
-    "static/js/main.9f971122.js"
+    "static/js/main.568c7702.js"
   ]
 }
