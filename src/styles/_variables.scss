@@ -1,0 +1,46 @@
+// _variables.scss
+@use 'sass:color';
+
+// Theme Variables
+:root {
+	// Light theme
+	--bg-color: #{rgb(248, 250, 252)}; // Background color
+	--fg-color: #{rgb(217, 234, 253)}; // Foreground color
+	--text-color: #{rgb(0, 0, 0)}; // Text color
+	--primary-color: #{rgb(188, 204, 220)}; // Primary color
+	--primary-color-text: #{rgb(0, 0, 0)}; // Primary text color
+	--primary-hover: #{rgb(154, 166, 178)}; // Primary hover color
+	--border-color: #{rgb(222, 226, 230)};
+	--shadow-color: #{rgba(0, 0, 0, 0.1)};
+}
+[data-theme='dark'] {
+	// Dark theme
+	--bg-color: #{rgb(18, 18, 18)};
+	--fg-color: #{rgb(44, 44, 44)};
+	--text-color: #{rgb(236, 240, 240)}; // Text color
+	--primary-color: #{rgb(115, 160, 230)}; // Primary color
+	--primary-color-text: #{rgb(236, 240, 241)};
+	--primary-hover: #{rgb(60, 100, 150)}; // Primary hover color
+	--border-color: #{rgb(61, 61, 61)};
+	--shadow-color: #{rgba(255, 255, 255, 0.1)}; // Shadow colo
+}
+
+[data-theme='amoled'] {
+	// Amoled theme
+	--bg-color: #{rgb(0, 0, 0)}; // Background color
+	--fg-color: #{rgb(10, 10, 10)}; // Foreground color
+	--text-color: #{rgb(190, 190, 190)}; // Text color
+	--primary-color: #{rgb(0, 255, 255)}; // Primary color
+	--primary-color-text: #{rgb(0, 0, 0)}; // Primary text color
+	--primary-hover: #{rgba(0, 255, 255, 0.5)}; // Primary hover color
+	--border-color: #{rgb(40, 40, 40)};
+	--shadow-color: #{rgba(255, 255, 255, 0.2)};
+}
+
+// Breakpoints
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+
+// Transitions
+$transition-fast: 0.1s ease;
+$transition-medium: 0.3s ease;

@@ -1,0 +1,26 @@
+@use '../mixins' as *;
+.skills-grid {
+    @include grid-responsive(250px);
+    margin-top: 2rem;
+  
+    .skill-card {
+      @include card-style;
+      padding: 1.5rem;
+  
+      .skill-items {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-top: 1rem;
+  
+        .skill-item {
+          background: var(--fg-color);
+          color: var(--text-color);
+          padding: 0.3rem 0.8rem;
+          border-radius: 20px;
+          font-size: 0.9rem;
+          border: 1px solid var(--border-color);
+        }
+      }
+    }
+  }

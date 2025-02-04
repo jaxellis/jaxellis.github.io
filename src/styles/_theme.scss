@@ -1,0 +1,7 @@
+[data-theme='dark'],
+[data-theme='amoled'] {
+	.project-card,
+	.skill-card {
+		border: 1px solid var(--border-color);
+	}
+}
