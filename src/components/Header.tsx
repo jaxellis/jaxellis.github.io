@@ -1,9 +1,8 @@
-// src/components/Header.jsx
 import React from 'react';
 import SocialLinks from './SocialLinks';
 import ThemeToggle from './ThemeToggle';
 
-const Header = () => {
+const Header: React.FC = () => {
   return (
     <header className="header">
       <div className="container">

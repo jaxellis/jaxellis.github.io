@@ -1,4 +1,13 @@
-export const projects = [
+export interface Project {
+	id: number;
+	title: string;
+	description: string;
+	tech: string[];
+	demo: string;
+	code: string;
+}
+
+export const projects: Project[] = [
 	{
 		id: 1,
 		title: 'Replugged NSFW Badge',

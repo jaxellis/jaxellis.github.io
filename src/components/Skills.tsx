@@ -2,7 +2,13 @@ import React from 'react';
 import { skills } from '../data/skills';
 import { FiCode } from 'react-icons/fi';
 
-const Skills = () => {
+interface Skill {
+  id: number;
+  title: string;
+  items: string[];
+}
+
+const Skills: React.FC = () => {
   return (
     <section id="skills" className="section">
       <div className="container">
@@ -10,7 +16,7 @@ const Skills = () => {
           <FiCode className="icon" /> Skills
         </h2>
         <div className="skills-grid">
-          {skills.map((skill) => (
+          {skills.map((skill: Skill) => (
             <div key={skill.id} className="skill-card">
               <h3>{skill.title}</h3>
               <div className="skill-items">

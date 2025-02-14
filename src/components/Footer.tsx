@@ -2,7 +2,7 @@ import React from 'react';
 import SocialLinks from './SocialLinks';
 import { FiArrowUp } from 'react-icons/fi';
 
-const Footer = () => {
+const Footer: React.FC = () => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -13,7 +13,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="container">
-        <button onClick={scrollToTop} className="scroll-top">
+        <button onClick={scrollToTop} className="scroll-top" aria-label="Scroll to top">
           <FiArrowUp />
         </button>
         <SocialLinks className="footer-socials" />

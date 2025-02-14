@@ -1,6 +1,4 @@
-// components/_header.scss
 @use '../variables' as *;
-@use '../_mixins' as *;
 
 .header {
     background: var(--fg-color);
@@ -8,19 +6,4 @@
     text-align: center;
     padding: 6rem 0;
     box-shadow: 0 2px 5px var(--shadow-color);
-  
-    .social-links {
-      @include flex-center(1.5rem);
-      margin-top: 1rem;
-  
-      a {
-        color: var(--text-color);
-        font-size: 1.5rem;
-        transition: opacity $transition-medium;
-  
-        &:hover {
-          opacity: 0.8;
-        }
-      }
-    }
   }
