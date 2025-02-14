@@ -3,7 +3,7 @@
 const isProd = process.env.NODE_ENV === 'production';
 
 const nextConfig = {
-	basePath: isProd ? '/jaxellis.github.io' : '',
+	basePath: isProd ? '' : '',
 	assetPrefix: isProd ? '/jaxellis.github.io/' : '',
 	images: {
 		unoptimized: true,
