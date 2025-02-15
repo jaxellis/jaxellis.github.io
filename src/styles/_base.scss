@@ -1,4 +1,6 @@
 @use 'variables' as *;
+@use 'mixins' as *;
+@use 'breakpoints' as *;
 
 * {
   margin: 0;
@@ -18,7 +20,14 @@ body {
 }
 
 .container {
-  max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
+
+  @include sm {
+    max-width: #{$breakpoint-lg};
+  }
+
+  @include lg {
+    max-width: 70vw;
+  }
 }

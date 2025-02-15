@@ -1,19 +1,40 @@
+@use '../mixins' as *;
+
 .about-content {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
   gap: 3rem;
   margin-top: 2rem;
 
   .profile-image {
     border-radius: 50%;
-    overflow: hidden;
-    width: 200px;
-    height: 200px;
 
     img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+    }
+  }
+}
+// Responsiveness
+@include sm {
+  .about-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    text-align: center;
+
+    .profile-image {
+      min-width: 20vw;
+    }
+  }
+}
+
+@include md {
+  .about-content {
+    display: flex;
+    align-items: center;
+    text-align: left;
+
+    .profile-image {
+      min-width: 0;
+      max-width: 20vw;
     }
   }
 }

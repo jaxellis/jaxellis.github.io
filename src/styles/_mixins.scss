@@ -1,4 +1,5 @@
 @use 'variables' as *;
+@use 'breakpoints' as *;
 
 @mixin flex-center($gap: 0) {
   display: flex;
@@ -20,4 +21,34 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax($min-width, 1fr));
   gap: 2rem;
+}
+
+// Media Breakpoints
+
+// Small devices
+@mixin sm {
+  @media (min-width: #{$breakpoint-sm}) {
+    @content;
+  }
+}
+
+// Medium devices
+@mixin md {
+  @media (min-width: #{$breakpoint-md}) {
+    @content;
+  }
+}
+
+// Large devices ~1080p
+@mixin lg {
+  @media (min-width: #{$breakpoint-lg}) {
+    @content;
+  }
+}
+
+// Extra large devices ~4k
+@mixin xl {
+  @media (min-width: #{$breakpoint-xl}) {
+    @content;
+  }
 }

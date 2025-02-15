@@ -1,7 +1,7 @@
 @use '../variables' as *;
 
 .theme-switcher {
-  position: fixed; // Changed from relative
+  position: fixed;
   top: 1rem;
   right: 1rem;
   display: flex;
@@ -30,7 +30,7 @@
 
     &:hover {
       color: var(--primary-color);
-      transform: scale(1.1);
+      transform: scale(1.5);
     }
 
     &.active {
@@ -45,24 +45,6 @@
 
     &.amoled svg {
       fill: black;
-    }
-  }
-}
-
-// Responsive adjustments
-@media (max-width: $breakpoint-md) {
-  .theme-switcher {
-    top: 0.5rem;
-    right: 0.5rem;
-
-    .theme-option {
-      width: 30px;
-      height: 35px;
-
-      svg {
-        width: 1.25rem;
-        height: 1.25rem;
-      }
     }
   }
 }
