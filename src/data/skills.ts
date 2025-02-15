@@ -17,6 +17,7 @@ export const skills: Skill[] = [
       'Next.js',
       'Responsive Design',
       'SASS',
+      'Stylus',
     ],
   },
   {
