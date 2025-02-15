@@ -12,14 +12,22 @@ const About: React.FC = () => {
         <div className="about-content">
           <div className="bio">
             <p>
-              I&apos;m a passionate frontend developer with 2 years of
-              experience creating responsive and user-friendly web applications.
-              Specializing in React and modern JavaScript ecosystems.
+              I am a versatile developer passionate about crafting tools that
+              streamline workflows and empower digital communities. Specializing
+              in JavaScript, CSS, and API integration, I build user-centric
+              solutions for platforms like Discord, IMDb, and anime/manga hubs,
+              including my IMDb Template Generator (automating BBCode via OMDB
+              API) and customizable CSS themes for MyAnimeList and Holodex.
             </p>
+            <br />
             <p>
-              When I&apos;m not coding, I enjoy contributing to open-source
-              projects, learning new technologies, and creating technical
-              content.
+              I am a committed advocate for collaborative development,
+              contributing to open-source ecosystems like BetterDiscordPlugins
+              and crafting innovative tools such as the Replugged NSFW Badge to
+              enhance user convenience. My work seamlessly blends technical
+              precision with community-driven creativity, emphasizing
+              customization and scalability to overcome niche challenges.
+              Connect with me on LinkedIn, or check out my projects on GitHub!
             </p>
           </div>
           <div className="profile-image">
