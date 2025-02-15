@@ -1,13 +1,9 @@
 import React from 'react';
 import { socialLinks } from '../data/socials';
 
-interface SocialLinksProps {
-	className: string;
-}
-
-const SocialLinks: React.FC<SocialLinksProps> = ({ className }) => {
+const SocialLinks: React.FC = () => {
 	return (
-		<div className={`social-links ${className}`}>
+		<div className={`social-links`}>
 			{socialLinks.map((social) => (
 				<a
 					key={social.name}
