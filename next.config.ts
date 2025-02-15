@@ -1,15 +1,10 @@
-/** @type {import('next').NextConfig} */
+import type { NextConfig } from 'next';
 
-const isProd = process.env.NODE_ENV === 'production';
-
-const nextConfig = {
-	basePath: isProd ? '' : '',
-	assetPrefix: isProd ? '/jaxellis.github.io/' : '',
+const nextConfig: NextConfig = {
 	images: {
 		unoptimized: true,
 	},
-	reactStrictMode: true,
-	output: 'export', // For static export
+	output: 'export',
 };
 
-module.exports = nextConfig;
+export default nextConfig;
