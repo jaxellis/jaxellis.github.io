@@ -6,7 +6,7 @@ interface Project {
   title: string;
   description: string;
   tech: string[];
-  demo: string;
+  demo?: string;
   code: string;
 }
 
@@ -25,12 +25,26 @@ const Projects: React.FC = () => {
                   <span key={tech}>{tech}</span>
                 ))}
               </div>
-              <a href={project.demo} target="_blank" rel="noreferrer" className="btn">
-                Demo
-              </a>
-              <a href={project.code} target="_blank" rel="noreferrer" className="btn">
-                Code
-              </a>
+              <div className="project-buttons">
+                {project.demo && (
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="btn"
+                  >
+                    Demo
+                  </a>
+                )}
+                <a
+                  href={project.code}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="btn"
+                >
+                  Code
+                </a>
+              </div>
             </div>
           ))}
         </div>
