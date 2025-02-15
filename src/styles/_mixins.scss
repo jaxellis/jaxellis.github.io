@@ -1,21 +1,23 @@
 @use 'variables' as *;
 
 @mixin flex-center($gap: 0) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: $gap;
-  }
-  
-  @mixin card-style {
-    background: var(--fg-color);
-    border-radius: 8px;
-    box-shadow: 0 2px 5px var(--shadow-color);
-    transition: transform $transition-medium, box-shadow $transition-medium;
-  }
-  
-  @mixin grid-responsive($min-width: 250px) {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax($min-width, 1fr));
-    gap: 2rem;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: $gap;
+}
+
+@mixin card-style {
+  background: var(--fg-color);
+  border-radius: 8px;
+  box-shadow: 0 2px 5px var(--shadow-color);
+  transition:
+    transform $transition-medium,
+    box-shadow $transition-medium;
+}
+
+@mixin grid-responsive($min-width: 250px) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($min-width, 1fr));
+  gap: 2rem;
+}

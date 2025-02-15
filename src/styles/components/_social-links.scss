@@ -2,16 +2,16 @@
 @use '../mixins' as *;
 
 .social-links {
-	@include flex-center(1.5rem);
-	margin-top: 1rem;
+  @include flex-center(1.5rem);
+  margin-top: 1rem;
 
-	a {
-		color: var(--text-color);
-		font-size: 1.5rem;
-		transition: opacity $transition-medium;
+  a {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    transition: opacity $transition-medium;
 
-		&:hover {
-			opacity: 0.8;
-		}
-	}
+    &:hover {
+      opacity: 0.8;
+    }
+  }
 }

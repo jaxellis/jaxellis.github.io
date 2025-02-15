@@ -12,13 +12,14 @@ const About: React.FC = () => {
         <div className="about-content">
           <div className="bio">
             <p>
-              I&apos;m a passionate frontend developer with 2 years of experience
-              creating responsive and user-friendly web applications.
+              I&apos;m a passionate frontend developer with 2 years of
+              experience creating responsive and user-friendly web applications.
               Specializing in React and modern JavaScript ecosystems.
             </p>
             <p>
-              When I&apos;m not coding, I enjoy contributing to open-source projects,
-              learning new technologies, and creating technical content.
+              When I&apos;m not coding, I enjoy contributing to open-source
+              projects, learning new technologies, and creating technical
+              content.
             </p>
           </div>
           <div className="profile-image">
