@@ -41,9 +41,9 @@ const About: React.FC = () => {
               <Image
                 src="/images/web-app-manifest-512x512.png"
                 alt="JaxEllis"
-                loading="lazy"
                 width={512}
                 height={512}
+                priority
               />
             </picture>
           </div>
