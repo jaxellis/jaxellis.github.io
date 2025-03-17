@@ -6,7 +6,7 @@ const ThemeToggle: React.FC = () => {
   const { currentTheme, setCurrentTheme } = useTheme();
 
   return (
-    <div className="theme-switcher">
+    <div className="theme-switcher" suppressHydrationWarning>
       {themes.map((theme) => (
         <button
           key={theme.id}
@@ -15,6 +15,7 @@ const ThemeToggle: React.FC = () => {
             currentTheme === theme.id ? ' active' : ''
           }`}
           aria-label={`Switch to ${theme.name} theme`}
+          suppressHydrationWarning
         >
           <theme.icon />
         </button>

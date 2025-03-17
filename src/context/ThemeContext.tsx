@@ -7,6 +7,17 @@ import React, {
 } from 'react';
 import { themes } from '../data/themes';
 
+const getInitialTheme = () => {
+  if (typeof window !== 'undefined') {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) return savedTheme;
+    return window.matchMedia('(prefers-color-scheme: dark)').matches
+      ? 'dark'
+      : 'light';
+  }
+  return undefined; // Return undefined for server-side rendering
+};
+
 interface Theme {
   id: string;
   name: string;
@@ -25,19 +36,28 @@ interface ThemeProviderProps {
 }
 
 export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
-  const [currentTheme, setCurrentTheme] = useState<string>('dark'); // Default theme
+  const [mounted, setMounted] = useState(false);
+  const [currentTheme, setCurrentTheme] = useState<string>(() => {
+    const initialTheme = getInitialTheme();
+    return initialTheme || 'dark';
+  });
 
+  // Handle initial mount
   useEffect(() => {
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-      setCurrentTheme(savedTheme);
-    }
+    setMounted(true);
   }, []);
 
   useEffect(() => {
-    localStorage.setItem('theme', currentTheme);
-    document.documentElement.setAttribute('data-theme', currentTheme);
-  }, [currentTheme]);
+    if (mounted) {
+      localStorage.setItem('theme', currentTheme);
+      document.documentElement.setAttribute('data-theme', currentTheme);
+    }
+  }, [currentTheme, mounted]);
+
+  // Prevent hydration mismatch
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <ThemeContext.Provider value={{ currentTheme, setCurrentTheme, themes }}>
