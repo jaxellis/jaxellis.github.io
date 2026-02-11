@@ -1,6 +1,5 @@
 import React from 'react';
 import { skills } from '../data/skills';
-import { FiCode } from 'react-icons/fi';
 
 interface Skill {
   id: number;
@@ -12,9 +11,7 @@ const Skills: React.FC = () => {
   return (
     <section id="skills" className="section">
       <div className="container">
-        <h2>
-          <FiCode className="icon" /> Skills
-        </h2>
+        <h2>Skills</h2>
         <div className="skills-grid">
           {skills.map((skill: Skill) => (
             <div key={skill.id} className="skill-card">
